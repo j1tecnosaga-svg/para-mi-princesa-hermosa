@@ -68,14 +68,41 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+        /* NUEVO ESTILO PARA LA CARTA DE AMOR */
+        .seccion-carta {
+            background-color: #161b22;
+            border: 1px dashed #ff758f;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: left;
+            box-shadow: inset 0 0 15px rgba(255, 77, 109, 0.05);
+        }
+        .titulo-carta {
+            color: #ff758f;
+            font-family: 'Georgia', serif;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 5px;
+        }
+        .texto-carta {
+            font-family: 'Georgia', serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #e6edf2;
+            white-space: pre-line; /* Mantiene los saltos de línea que escribas */
+        }
         .mensaje-eterno {
             background-color: rgba(255, 77, 109, 0.1);
             border-left: 4px solid #ff4d6d;
             padding: 15px;
             border-radius: 4px;
             font-style: italic;
-            margin-top: 25px;
+            margin-top: 35px;
             font-size: 1.2rem;
+            text-align: center;
         }
     </style>
 </head>
@@ -106,14 +133,39 @@
             </div>
         </div>
 
+        <!-- AQUÍ EMPIEZA TU CARTITA PERSONALIZADA -->
+        <div class="seccion-carta">
+            <div class="titulo-carta">Una pequeña cartita para ti... 📝</div>
+            <div class="texto-carta">
+               Querida emilia, el amor de mi vida, te escribo esta carta en digital para darte un obsequio diferente 
+               junto a esta carta habra visto que se encuentra un marcador con el tiempo que llevamos juntos, Desde que 
+               la conoci senti algo diferente, algo especial, algo que nunca me pude explicar y negaba, ¿que era? era 
+               el hecho de estar enamorado de usted algo que negaba no porque no quiera sino porque nunca me entendi por 
+               completo, hasta hace tiempo en donde me di cuenta que su ausencia es la mas dolorosa la cual me a tirado 
+               noches enteras pensando en usted, soñando co usted y sobre todo extrañandola como a nadie nunca extrañe,
+               esos dias sin su prescencia han sido doloros, mi culpa fue, y yo lo remediare, denmostrandole que mi amor 
+               no tiene limite alguno, los limites los rompere para demostrarte que eres para MI y solo para MI, voy a estar
+               en su vida para siempre para apoyarla y demostrarle como se le trata a una princesa. Su compañia es la que 
+               me motiva a seguir adelante y la razon por la cual no estoy dispuesto a estar solo, sin ti nada es lo mismo, 
+               los abrazos, los besos no son lo mismo que contigo, te conquistare todos los dias, te coqueteare todos los dias
+               para que vea el gusto, deseo y amor que le tengo a usted y solo a usted, yo la amo, mejor dicho la AMODORO 
+               como a nadie nunca me imagine amar, te tratare siempre sin faltas como una princesa y como la dueña de mi corazon 
+               de mi alma y de mi vida, mis pensamientos le pertenece a usted y solo a usted. Quise darle un detalle un poco 
+               distinto, para que vea que por usted nunca se me acabaran las ideas porque el amor que te tengo es inmenso, estas 
+               palabras se quedan cortas comparadas con el sentimiento que le tengo y le tendre por siempre porque tu eres 
+               la mujer de mi vida, cualquier dificultad la pasaremos porque somos los MEJORES. TE AMO EMILIA FERNANDA eres el amor
+               de esta y todas mis vidas nunca te traicionare, porque yo te AMO y ADORO como a NADIE, eres UNICA en mi VIDA eres
+               y seras TU para toda la ETERNIDAD.
+
+            </div>
+        </div>
+
         <div class="mensaje-eterno">
             "Mi único y más grande deseo es pasar el resto de toda mi vida a tu lado. Te amo infinitamente."
         </div>
     </div>
 
     <script>
-        // Configurado exactamente para el 16 de Septiembre de 2026
-        // En JavaScript los meses van de 0 a 11 (Septiembre es el mes 8)
         const fechaInicio = new Date(2026, 8, 16, 0, 0, 0); 
 
         function actualizarContador() {
