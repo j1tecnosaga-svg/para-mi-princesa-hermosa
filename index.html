@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Toda La Vida ❤️</title>
+    <style>
+        body {
+            background-color: #0b0c10;
+            color: #ecf2f8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            min-height: 100vh;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .tarjeta-amor {
+            background-color: #1f2833;
+            border: 2px solid #ff4d6d;
+            border-radius: 20px;
+            padding: 35px;
+            max-width: 550px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(255, 77, 109, 0.2);
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #ff4d6d;
+            font-size: 2.4rem;
+            margin-top: 0;
+            text-shadow: 0 0 10px rgba(255, 77, 109, 0.3);
+        }
+        p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #c9d1d9;
+        }
+        .resaltado {
+            color: #66fcf1;
+            font-weight: bold;
+        }
+        .contador-contenedor {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin: 30px 0;
+        }
+        .tiempo-bloque {
+            background-color: #0b0c10;
+            border-radius: 12px;
+            padding: 15px 5px;
+            border: 1px solid #45f3ff;
+            box-shadow: 0 0 8px rgba(102, 252, 241, 0.2);
+        }
+        .tiempo-numero {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #66fcf1;
+            display: block;
+        }
+        .tiempo-etiqueta {
+            font-size: 0.85rem;
+            color: #8b949e;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .mensaje-eterno {
+            background-color: rgba(255, 77, 109, 0.1);
+            border-left: 4px solid #ff4d6d;
+            padding: 15px;
+            border-radius: 4px;
+            font-style: italic;
+            margin-top: 25px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tarjeta-amor">
+        <h1>Nuestra Historia Eterna ❤️</h1>
+        <p>Desde el <span class="resaltado">año pasado</span> cuando te conocí, mi vida cambió por completo. Cada momento a tu lado se volvió mi recuerdo favorito, y supe desde el primer instante que eras alguien completamente excepcional.</p>
+        
+        <p>Hoy, cada día 16 celebramos el amor tan inmenso que nos une. Aquí puedes ver el tiempo exacto que llevamos construyendo este camino juntos:</p>
+        
+        <div class="contador-contenedor">
+            <div class="tiempo-bloque">
+                <span class="tiempo-numero" id="dias">00</span>
+                <span class="tiempo-etiqueta">Días</span>
+            </div>
+            <div class="tiempo-bloque">
+                <span class="tiempo-numero" id="horas">00</span>
+                <span class="tiempo-etiqueta">Horas</span>
+            </div>
+            <div class="tiempo-bloque">
+                <span class="tiempo-numero" id="minutos">00</span>
+                <span class="tiempo-etiqueta">Minutos</span>
+            </div>
+            <div class="tiempo-bloque">
+                <span class="tiempo-numero" id="segundos">00</span>
+                <span class="tiempo-etiqueta">Segundos</span>
+            </div>
+        </div>
+
+        <div class="mensaje-eterno">
+            "Mi único y más grande deseo es pasar el resto de toda mi vida a tu lado. Te amo infinitamente."
+        </div>
+    </div>
+
+    <script>
+        // Configurado exactamente para el 16 de Septiembre de 2026
+        // En JavaScript los meses van de 0 a 11 (Septiembre es el mes 8)
+        const fechaInicio = new Date(2026, 8, 16, 0, 0, 0); 
+
+        function actualizarContador() {
+            const ahora = new Date();
+            const diferencia = ahora - fechaInicio;
+
+            const msecPorSegundo = 1000;
+            const msecPorMinuto = 60 * msecPorSegundo;
+            const msecPorHora = 60 * msecPorMinuto;
+            const msecPorDia = 24 * msecPorHora;
+
+            const dias = Math.floor(diferencia / msecPorDia);
+            const horas = Math.floor((diferencia % msecPorDia) / msecPorHora);
+            const minutos = Math.floor((diferencia % msecPorHora) / msecPorMinuto);
+            const segundos = Math.floor((diferencia % msecPorMinuto) / msecPorSegundo);
+
+            document.getElementById('dias').innerText = dias;
+            document.getElementById('horas').innerText = String(horas).padStart(2, '0');
+            document.getElementById('minutos').innerText = String(minutos).padStart(2, '0');
+            document.getElementById('segundos').innerText = String(segundos).padStart(2, '0');
+        }
+
+        setInterval(actualizarContador, 1000);
+        actualizarContador();
+    </script>
+</body>
+</html>
